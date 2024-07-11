@@ -6965,3 +6965,15 @@ trim_array(PG_FUNCTION_ARGS)
 
 	PG_RETURN_DATUM(result);
 }
+
+Datum
+pg_function_test(PG_FUNCTION_ARGS)
+{
+  ArrayType *v = PG_GETARG_ARRAYTYPE_P(0);
+  int n = PG_GETARG_INT32(1);
+  //Datum result;
+  int array_length = (ARR_NDIM(v) > 0) ? ARR_DIMS(v)[0] : 0;
+  PG_RETURN_DATUM(v);
+
+
+}

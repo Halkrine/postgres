@@ -12043,4 +12043,7 @@
   proname => 'any_value_transfn', prorettype => 'anyelement',
   proargtypes => 'anyelement anyelement', prosrc => 'any_value_transfn' },
 
+{ oid => '10011', descr => 'postgres function test',
+  proname => 'pg_function_test', prorettype => 'anyarray',
+  proargtypes => 'anyarray', prosrc =>'pg_function_test' },
 ]
